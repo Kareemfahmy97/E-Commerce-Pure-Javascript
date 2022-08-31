@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Contact Us</title>
+   <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--start here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+      <div class="container">
+        <a
+          href="index.html"
+          class="navbar-brand d-flex justify-content-between align-items-center order-lg-0"
+        >
+          <img src="../images/shipping.png" alt="site icon" />
+          <span class="text-uppercase fw-lighter ms-2">Kareem</span>
+        </a>
+        <div class="order-lg-2">
+
+          <!-- cart -->
+          <button type="button" id="btn-add-cart" class="btn position-relative">
+            <i class="fa fa-shopping-cart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary" id="cart-badge"
+              ></span>
+                <div class="cart-product" id="cart-container">
+                <div id="cart-items"></div>
+            </div>
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-heart"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge bg-primary"
+              >2</span
+            >
+          </button>
+          <button type="button" class="btn position-relative">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <button
+          type="button"
+          class="navbar-toggler border-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+          <ul class="navbar-nav mx-auto text-center">
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="../index.html"
+                >Home</a
+              >
+            </li>
+                        <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="../index.html#collection"
+                >Collection</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2">
+              <a class="nav-link text-uppercase text-dark" href="../index.html#myAbout"
+                >About</a
+              >
+            </li>
+            <li class="nav-item px-2 py-2 border-0">
+              <a class="nav-link text-uppercase text-dark" href="./Contact Us/index.html" target="_blank"
+                >Contact us!</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div class="row col-md-12 main">
+      <div class="col-md-6 image-area">
+        <img src="./image/30.png" alt="contact-us">
+      </div>
+      <div class="col-md-6 form-area">
+        <div class="form-header mb-4 pt-5 position-relative">
+          <h1>Get in Touch with Us!</h1>
+        </div>
+        <form  id="my-form" name="my-form" class="form">
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="fname" placeholder=" Your Name">
+            <label for="fname"><i class="fa fa-user mx-3"></i> Full Name</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="email" placeholder=" Your Email">
+            <label for="email"><i class="fa fa-envelope mx-3"></i> Email Adress</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="number" class="form-control" id="password" placeholder=" Your number">
+            <label for="number"><i class="fa fa-phone-alt mx-3"></i> Number </label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <textarea type="text" class="form-control" id="message" placeholder=" Your Message "></textarea>
+            <label for="message"><i class="fa fa-message mx-3"></i> Message</label>
+            </div>
+
+            <div class="form-check">
+                <input  id="genderM" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                 Male
+               </label>
+               </div>
+               <div class="form-check">
+               <input  id="genderF" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+               <label class="form-check-label" for="flexRadioDefault2">
+               Female
+              </label>
+            </div>
+
+            <div class="country-check">
+            <select id="country" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option selected value="">Select your country</option>
+              <option value="1">Egypt</option>
+              <option value="2">Italy</option>
+              <option value="3">Paris</option>
+            </select>            
+            </div>
+
+            <div class="err-message">
+              <span id="errMsg"></span>
+            </div>
+          <div class="btn-group">
+          <button id="submit" type="submit" class="btn btn-custom" onclick="clearInner()">Submit</button>
+          <button id="reset" class="btn btn-custom">Reset</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+    <!--end here-->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://kit.fontawesome.com/0f852bec08.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./demo.js"></script>
+  </body>
+</html>
