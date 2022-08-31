@@ -10,18 +10,18 @@ var resetHandler = document.getElementById('reset')
 var errMsg = document.getElementById("errMsg");
 var arrChecked = [];
 
-var nameFormat = /[ `!@#$%^&*()_+\-=\[\]{};':"|,.<>\/?~]/;
+var nameFormat = /^([^0-9]*)$/;
 var emailFormat =
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 
 // Real time validation
 nameInput.addEventListener("input", function (e) {
-  if (e.target.value.length > 1) {
+  if (!nameFormat.test(e.target.value)) {
     e.target.style.border = "2px solid green";
     errMsg.innerHTML = "";
   }
-  if (e.target.value.trim() == "" || nameFormat.test(e.target.value)) {
+  if (e.target.value.trim() == "" || !nameFormat.test(e.target.value)) {
     e.target.style.border = "3px solid red";
     errMsg.innerText = "Please Enter a valid name";
     errMsg.className = "errorMsg";
@@ -99,7 +99,7 @@ var validateEmail = function () {
   }
 };
 var validateName = function () {
-  if (nameInput.value.trim() == "" || nameFormat.test(nameInput.value)) {
+  if (nameInput.value.trim() == "" || !nameFormat.test(nameInput.value)) {
     nameInput.style.border = "3px solid red";
     errMsg.innerHTML += "<p>Please Enter a valid Name.</p>";
     errMsg.className = "errorMsg";

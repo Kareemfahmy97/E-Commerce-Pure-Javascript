@@ -9,7 +9,7 @@ let aboutUsSection = document.getElementById("myAbout");
 let aboutUsParag = document.getElementById("about-parag");
 var j = 0;
 let myParagraph =
-  "Nam debitis quo soluta dolor sint quas deserunt recusandae,quisquam repellendus mollitia earum a tempore quia. Nam debitis quo soluta dolor sint quas deserunt recusandae, quisquam repellendus mollitia earum a tempore quia.";
+  "Nam debitis quo soluta dolor sint quas deserunt recusandae,quisquam repellendus mollitia earum a tempore quia. Nam debitis quo soluta dolor sint quas deserunt recusandae, quisquam repellendus mollitia earum a tempore quia. Nam debitis quo soluta dolor sint quas deserunt recusandae,quisquam repellendus mollitia earum a tempore quia. Nam debitis quo soluta dolor sint quas deserunt recusandae, quisquam repellendus mollitia earum a tempore quia.";
 const buttons = document.querySelectorAll("[data-carousel-button]");
 
 window.onscroll = function () {
